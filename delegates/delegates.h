@@ -17,6 +17,8 @@ namespace gd {
     class DialogLayer;
     class CCCircleWave;
     class CCScrollLayerExt;
+    class CurrencyRewardLayer;
+    class DialogLayer;
 
     enum GJSongError {
         kGJSongErrorUnknown_not_REd = 0,
@@ -196,6 +198,11 @@ namespace gd {
 
     class GDH_DLL CCCircleWaveDelegate {
         void circleWaveWillBeRemoved(CCCircleWave*) {}
+    };
+
+    class GDH_DLL CurrencyRewardDelegate {
+        public:
+            virtual void currencyWillExit(CurrencyRewardLayer*) {};
     };
 
     enum AccountError {
